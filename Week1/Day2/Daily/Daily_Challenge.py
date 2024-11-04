@@ -34,11 +34,10 @@
 # edit_text = list(text)
 # text_copy = edit_text.copy()
 # i = 0
-# while i < len(edit_text)-1:
-#     if edit_text[i] == edit_text[i+1]:
-#         edit_text.pop(i+1)
-#         i-=1
+# while i < len(edit_text) - 1:
+#     if edit_text[i] == edit_text[i + 1]:
+#         edit_text.pop(i + 1)
 #     else:
-#         i+=1
+#         i += 1
 # edit_text = ''.join(edit_text)
 # print(edit_text)
