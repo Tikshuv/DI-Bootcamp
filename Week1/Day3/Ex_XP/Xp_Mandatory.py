@@ -1,7 +1,7 @@
 # Exercise 1 : Convert lists into dictionaries
 # Instructions
 # Convert the two following lists, into dictionaries.
-# Hint: Use the zip method
+    # Hint: Use the zip method
 
 
 # keys = ['Ten', 'Twenty', 'Thirty']

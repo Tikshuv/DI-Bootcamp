@@ -64,32 +64,32 @@
 #
 # ➞ "Nothing"
 
-wallet = input("How much money you have?(default is 100$\n") or '100$'
-wallet = int(''.join(num for num in wallet if num.isdigit()))
-items_purchase = {
-  "Apple": "$4",
-  "Honey": "$3",
-  "Fan": "$14",
-  "Bananas": "$4",
-  "Pan": "$100",
-  "Spoon": "$2"
-}
-shopp_list = []
-spending = wallet
-for product, price in items_purchase.items():
-    items_purchase[product] = int(''.join(num for num in price if num.isdigit()))
-for product, price in items_purchase.items():
-    if wallet - price >= 0:
-        if spending - price > 0:
-            shopp_list.append(product)
-            spending -= price
-        else:
-            print(f"You could've afforded {product}, but not with", ', '.join(shopp_list))
-if not shopp_list:
-    print('Nothing')
-else:
-    shopp_list = sorted(shopp_list)
-    print(shopp_list)
+# wallet = input("How much money you have?(default is 100$\n") or '100$'
+# wallet = int(''.join(num for num in wallet if num.isdigit()))
+# items_purchase = {
+#   "Apple": "$4",
+#   "Honey": "$3",
+#   "Fan": "$14",
+#   "Bananas": "$4",
+#   "Pan": "$100",
+#   "Spoon": "$2"
+# }
+# shopp_list = []
+# spending = wallet
+# for product, price in items_purchase.items():
+#     items_purchase[product] = int(''.join(num for num in price if num.isdigit()))
+# for product, price in items_purchase.items():
+#     if wallet - price >= 0:
+#         if spending - price > 0:
+#             shopp_list.append(product)
+#             spending -= price
+#         else:
+#             print(f"You could've afforded {product}, but not with", ', '.join(shopp_list))
+# if not shopp_list:
+#     print('Nothing')
+# else:
+#     shopp_list = sorted(shopp_list)
+#     print(shopp_list)
 
 
 
