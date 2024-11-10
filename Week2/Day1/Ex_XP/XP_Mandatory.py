@@ -151,53 +151,57 @@
 # me.presentation()
 #
 
-class Zoo:
-
-    def __init__(self, zoo_name):
-        self.name = zoo_name
-        self.animals = []
-
-    def add_animal(self, new_animal):
-        if new_animal not in self.animals:
-            self.animals.append(new_animal)
-
-    def get_animals(self):
-        for animal in self.animals:
-            print(animal)
-
-    def sell_animal(self, animal_sold):
-        if animal_sold in self.animals:
-            self.animals.remove(animal_sold)
-        else:
-            print("There's no such animal in the", self.name)
-
-    def sort_animal(self):
-        sorted_animals = sorted(self.animals)
-        alph_animals = {}
-        animals = []
-        i = 1
-        letter = sorted_animals[0][0]
-        for animal in sorted_animals:
-            if letter.lower == animal[0].lower:
-                animals.append(animal)
-                alph_animals[i] = animals
-            else:
-                i += 1
-                letter = animal[0]
-                animals = [animal]
-                alph_animals[i] = animals
-        print(alph_animals)
-        return alph_animals
-
-    def get_groups(self):
-        animals = self.sort_animal()
-        for group, animals in animals.items():
-            print(f"Group of animals number {group} consists of: {[animal for animal in animals]}")
 
 
-ramat_gan_safari = Zoo("Ramat Gan Safari")
-ramat_gan_safari.animals = ['Monkey', 'Zebra', 'Ape', 'Dog', 'Cat', 'Panda', 'Baboon', 'Bear']
-ramat_gan_safari.add_animal('Giraffe')
-ramat_gan_safari.get_groups()
-ramat_gan_safari.sort_animal()
+
+# class Zoo:
+#
+#     def __init__(self, zoo_name):
+#         self.name = zoo_name
+#         self.animals = []
+#
+#     def add_animal(self, new_animal):
+#         if new_animal not in self.animals:
+#             self.animals.append(new_animal)
+#
+#     def get_animals(self):
+#         for animal in self.animals:
+#             print(animal)
+#
+#     def sell_animal(self, animal_sold):
+#         if animal_sold in self.animals:
+#             self.animals.remove(animal_sold)
+#         else:
+#             print("There's no such animal in the", self.name)
+#
+#     def sort_animal(self):
+#         sorted_animals = sorted(self.animals)
+#         alph_animals = {}
+#         animals = []
+#         i = 1
+#         letter = sorted_animals[0][0]
+#         for animal in sorted_animals:
+#             if letter.lower == animal[0].lower:
+#                 animals.append(animal)
+#                 alph_animals[i] = animals
+#             else:
+#                 i += 1
+#                 letter = animal[0]
+#                 animals = [animal]
+#                 alph_animals[i] = animals
+#         return alph_animals
+#
+#     def get_groups(self):
+#         animals = self.sort_animal()
+#         for group, animals in animals.items():
+#             print(f"Group of animals number {group} consists of: {[animal for animal in animals]}")
+#
+#
+# ramat_gan_safari = Zoo("Ramat Gan Safari")
+# ramat_gan_safari.animals = ['Monkey', 'Zebra', 'Ape', 'Dog', 'Cat', 'Panda', 'Baboon', 'Bear']
+# ramat_gan_safari.add_animal('Giraffe')
+# print(ramat_gan_safari.sort_animal())
+# ramat_gan_safari.sell_animal('Ape')
+# print(ramat_gan_safari.sort_animal())
+# ramat_gan_safari.get_groups()
 
