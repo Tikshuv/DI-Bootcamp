@@ -35,8 +35,13 @@ class Text:
         return f_dict
 
     def most_common(self):
-        freq = self.frequency()
-        most = max(zip(freq.values(), freq.keys()))[1]
+        freq = list(self.frequency().items())
+        most = [freq[0]]
+        i = 0
+        while freq[i][1] == freq[i+1][1]:
+            most.append(freq[i+1])
+            i += 1
+
         return most
 
     def all_uniques(self):
