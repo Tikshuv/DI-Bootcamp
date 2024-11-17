@@ -1,0 +1,8 @@
+Relation data bases
+1. data base with parent-child relationships(where one table inherits fields/rows from another?)
+SQL
+2.Data base's language to work with tables, sequel/structured query language
+Postgress
+3.IDE-like for data bases
+WHat is NULL
+4.absence of value that otherwise is filled
