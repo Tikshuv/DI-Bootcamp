@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Guinea-Bissau",
+        "capital": "Bissau",
+        "flag": "https://flagcdn.com/w320/gw.png",
+        "subregion": "Western Africa",
+        "population": 1967998
+    },
+    {
+        "name": "New Zealand",
+        "capital": "Wellington",
+        "flag": "https://flagcdn.com/w320/nz.png",
+        "subregion": "Australia and New Zealand",
+        "population": 5084300
+    },
+    {
+        "name": "Malaysia",
+        "capital": "Kuala Lumpur",
+        "flag": "https://flagcdn.com/w320/my.png",
+        "subregion": "South-Eastern Asia",
+        "population": 32365998
+    },
+    {
+        "name": "British Indian Ocean Territory",
+        "capital": "Diego Garcia",
+        "flag": "https://flagcdn.com/w320/io.png",
+        "subregion": "Eastern Africa",
+        "population": 3000
+    },
+    {
+        "name": "Sudan",
+        "capital": "Khartoum",
+        "flag": "https://flagcdn.com/w320/sd.png",
+        "subregion": "Northern Africa",
+        "population": 43849269
+    },
+    {
+        "name": "Kazakhstan",
+        "capital": "Nur-Sultan",
+        "flag": "https://flagcdn.com/w320/kz.png",
+        "subregion": "Central Asia",
+        "population": 18754440
+    },
+    {
+        "name": "South Korea",
+        "capital": "Seoul",
+        "flag": "https://flagcdn.com/w320/kr.png",
+        "subregion": "Eastern Asia",
+        "population": 51780579
+    },
+    {
+        "name": "Mayotte",
+        "capital": "Mamoudzou",
+        "flag": "https://flagcdn.com/w320/yt.png",
+        "subregion": "Eastern Africa",
+        "population": 226915
+    },
+    {
+        "name": "Switzerland",
+        "capital": "Bern",
+        "flag": "https://flagcdn.com/w320/ch.png",
+        "subregion": "Western Europe",
+        "population": 8654622
+    },
+    {
+        "name": "Greenland",
+        "capital": "Nuuk",
+        "flag": "https://flagcdn.com/w320/gl.png",
+        "subregion": "North America",
+        "population": 56367
+    }
+]
