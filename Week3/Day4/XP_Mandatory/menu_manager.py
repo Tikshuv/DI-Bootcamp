@@ -55,7 +55,7 @@ class MenuManager:
         except Exception as e:
             print(f"Error fetching all items: {e}")
             return []
-
+import dotenv
 
 #
 # a = MenuItem('Beer', 33)
