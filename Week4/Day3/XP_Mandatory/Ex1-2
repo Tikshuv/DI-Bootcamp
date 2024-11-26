@@ -1,0 +1,23 @@
+🌟 Exercise 1: Identifying Data Types
+Below are various data sources. Identify whether each one is an example of structured or unstructured data.
+
+A company’s financial reports stored in an Excel file - structured
+Photographs uploaded to a social media platform - unstructured(although can be structured by storing in according albums)
+A collection of news articles on a website - unstructured unless they have tags/categories
+Inventory data in a relational database - structured
+Recorded interviews from a market research study - unstructured
+
+
+🌟 Exercise 2: Transformation Exercise
+For each of the following unstructured data sources, propose a method to convert it into structured data. Explain your reasoning.
+
+A series of blog posts about travel experiences - add tags to them depending on kind of expenses and amount.
+
+
+Audio recordings of customer service calls - transcribe records and separate in categories based on predefined criteria
+for example: resolved/not resolved, longer than 5 mins/shorter, reasons of the call etc.
+
+Handwritten notes from a brainstorming session - give them rating based on votes from the group, separate them on
+categories based on what field of ideas(UI, QoL, etc)
+
+A video tutorial on cooking - break in into segments(preparation, ingredients, each action in own segment)
