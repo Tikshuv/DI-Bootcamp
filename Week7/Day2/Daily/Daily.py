@@ -37,21 +37,14 @@ driver.get(url)
 
 wait = WebDriverWait(driver, 10)
 time.sleep(5)
-page_source = driver.page_source
-soup = BeautifulSoup(page_source, "html.parser")
 
-
-# Find the relevant data elements (This will depend on the webpage's structure. Inspect the page source to find correct elements)
-# Example for extracting daily forecast data:
 daily_forecasts = []
-
-# Example of extracting data - adapt selectors to actual webpage structure.
 soup = BeautifulSoup(driver.page_source, "html.parser")
 pattern = re.compile(r'^daylink-(1[0-3]|[1-9])$')
 days = soup.find_all(id=pattern)
 print(len(days))
 for day in days:
-  date = day.find("span", class_="wr-date__longish__dotm").text # Replace with the correct class name or other selector
+  date = day.find("span", class_="wr-date__longish__dotm").text
   temps_c = day.find_all("span", class_="wr-value--temperature--c")
   temps = [int(temp.text.replace("°", "")) for temp in temps_c]
   high_temp = temps[0]
