@@ -1,0 +1,2187 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+        <calculation class='tableau' formula='&quot;Males&quot;' />
+        <members>
+          <member value='&quot;Females&quot;' />
+          <member value='&quot;Males&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Global_Education' inline='true' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Global_Education' name='textscan.0w49f3l1bsc0qx13iewf70cyujlj'>
+            <connection class='textscan' directory='/Users/dmitrijmarculanis/Downloads' filename='Global_Education.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0w49f3l1bsc0qx13iewf70cyujlj' name='Global_Education.csv' table='[Global_Education#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en' separator=','>
+            <column datatype='string' name='Countries and areas' ordinal='0' />
+            <column datatype='real' name='Latitude ' ordinal='1' />
+            <column datatype='real' name='Longitude' ordinal='2' />
+            <column datatype='integer' name='OOSR_Pre0Primary_Age_Male' ordinal='3' />
+            <column datatype='integer' name='OOSR_Pre0Primary_Age_Female' ordinal='4' />
+            <column datatype='integer' name='OOSR_Primary_Age_Male' ordinal='5' />
+            <column datatype='integer' name='OOSR_Primary_Age_Female' ordinal='6' />
+            <column datatype='integer' name='OOSR_Lower_Secondary_Age_Male' ordinal='7' />
+            <column datatype='integer' name='OOSR_Lower_Secondary_Age_Female' ordinal='8' />
+            <column datatype='integer' name='OOSR_Upper_Secondary_Age_Male' ordinal='9' />
+            <column datatype='integer' name='OOSR_Upper_Secondary_Age_Female' ordinal='10' />
+            <column datatype='integer' name='Completion_Rate_Primary_Male' ordinal='11' />
+            <column datatype='integer' name='Completion_Rate_Primary_Female' ordinal='12' />
+            <column datatype='integer' name='Completion_Rate_Lower_Secondary_Male' ordinal='13' />
+            <column datatype='integer' name='Completion_Rate_Lower_Secondary_Female' ordinal='14' />
+            <column datatype='integer' name='Completion_Rate_Upper_Secondary_Male' ordinal='15' />
+            <column datatype='integer' name='Completion_Rate_Upper_Secondary_Female' ordinal='16' />
+            <column datatype='integer' name='Grade_2_3_Proficiency_Reading' ordinal='17' />
+            <column datatype='integer' name='Grade_2_3_Proficiency_Math' ordinal='18' />
+            <column datatype='integer' name='Primary_End_Proficiency_Reading' ordinal='19' />
+            <column datatype='integer' name='Primary_End_Proficiency_Math' ordinal='20' />
+            <column datatype='integer' name='Lower_Secondary_End_Proficiency_Reading' ordinal='21' />
+            <column datatype='integer' name='Lower_Secondary_End_Proficiency_Math' ordinal='22' />
+            <column datatype='integer' name='Youth_15_24_Literacy_Rate_Male' ordinal='23' />
+            <column datatype='integer' name='Youth_15_24_Literacy_Rate_Female' ordinal='24' />
+            <column datatype='real' name='Birth_Rate' ordinal='25' />
+            <column datatype='real' name='Gross_Primary_Education_Enrollment' ordinal='26' />
+            <column datatype='real' name='Gross_Tertiary_Education_Enrollment' ordinal='27' />
+            <column datatype='real' name='Unemployment_Rate' ordinal='28' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Countries and areas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Countries and areas]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Countries and areas</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude </remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude ]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Latitude </remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Pre0Primary_Age_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Pre0Primary_Age_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Pre0Primary_Age_Male</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Pre0Primary_Age_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Pre0Primary_Age_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Pre0Primary_Age_Female</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Primary_Age_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Primary_Age_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Primary_Age_Male</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Primary_Age_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Primary_Age_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Primary_Age_Female</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Lower_Secondary_Age_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Lower_Secondary_Age_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Lower_Secondary_Age_Male</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Lower_Secondary_Age_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Lower_Secondary_Age_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Lower_Secondary_Age_Female</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Upper_Secondary_Age_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Upper_Secondary_Age_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Upper_Secondary_Age_Male</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OOSR_Upper_Secondary_Age_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OOSR_Upper_Secondary_Age_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>OOSR_Upper_Secondary_Age_Female</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Primary_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Primary_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Primary_Male</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Primary_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Primary_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Primary_Female</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Lower_Secondary_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Lower_Secondary_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Lower_Secondary_Male</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Lower_Secondary_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Lower_Secondary_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Lower_Secondary_Female</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Upper_Secondary_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Upper_Secondary_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Upper_Secondary_Male</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Completion_Rate_Upper_Secondary_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Completion_Rate_Upper_Secondary_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Completion_Rate_Upper_Secondary_Female</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Grade_2_3_Proficiency_Reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Grade_2_3_Proficiency_Reading]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Grade_2_3_Proficiency_Reading</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Grade_2_3_Proficiency_Math</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Grade_2_3_Proficiency_Math]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Grade_2_3_Proficiency_Math</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Primary_End_Proficiency_Reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Primary_End_Proficiency_Reading]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Primary_End_Proficiency_Reading</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Primary_End_Proficiency_Math</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Primary_End_Proficiency_Math]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Primary_End_Proficiency_Math</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lower_Secondary_End_Proficiency_Reading</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Lower_Secondary_End_Proficiency_Reading]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Lower_Secondary_End_Proficiency_Reading</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lower_Secondary_End_Proficiency_Math</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Lower_Secondary_End_Proficiency_Math]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Lower_Secondary_End_Proficiency_Math</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Youth_15_24_Literacy_Rate_Male</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Youth_15_24_Literacy_Rate_Male]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Youth_15_24_Literacy_Rate_Male</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Youth_15_24_Literacy_Rate_Female</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Youth_15_24_Literacy_Rate_Female]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Youth_15_24_Literacy_Rate_Female</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Birth_Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Birth_Rate]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Birth_Rate</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gross_Primary_Education_Enrollment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Gross_Primary_Education_Enrollment]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Gross_Primary_Education_Enrollment</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gross_Tertiary_Education_Enrollment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Gross_Tertiary_Education_Enrollment]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Gross_Tertiary_Education_Enrollment</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unemployment_Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unemployment_Rate]</local-name>
+            <parent-name>[Global_Education.csv]</parent-name>
+            <remote-alias>Unemployment_Rate</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Birth Rate' datatype='real' name='[Birth_Rate]' role='measure' type='quantitative' />
+      <column caption='Youth' datatype='integer' name='[Calculation_3770005503272435712]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='case [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Youth_15_24_Literacy_Rate_Female]&#10;WHEN &apos;Males&apos; Then [Youth_15_24_Literacy_Rate_Male]&#10;END' />
+      </column>
+      <column caption='Completion Rate Lower' datatype='integer' name='[Calculation_3858459014715117568]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Lower_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Lower_Secondary_Male]&#10;END' />
+      </column>
+      <column caption='Completion Rate Primary' datatype='integer' name='[Calculation_3858459014715310081]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Primary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Primary_Male]&#10;END' />
+      </column>
+      <column caption='Completion Rate Upper' datatype='integer' name='[Calculation_3858459014715629570]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Upper_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Upper_Secondary_Male]&#10;END' />
+      </column>
+      <column caption='OOSR lower' datatype='integer' name='[Calculation_3858459014719221764]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Lower_Secondary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Lower_Secondary_Age_Male]&#10;END' />
+      </column>
+      <column caption='OOSR Primary' datatype='integer' name='[Calculation_3858459014719381509]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Primary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Primary_Age_Male]&#10;END' />
+      </column>
+      <column caption='OOSR Upper' datatype='integer' name='[Calculation_3858459014719508486]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Upper_Secondary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Upper_Secondary_Age_Male]&#10;END' />
+      </column>
+      <column caption='Lower Secondary Rate' datatype='real' name='[Calculation_3858459014719709191]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([Calculation_3858459014715117568])/IFNULL(sum([Calculation_3858459014719221764]),1)' />
+      </column>
+      <column caption='Primary Rate' datatype='real' name='[Calculation_3858459014748786696]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([Calculation_3858459014715310081])/IFNULL(sum([Calculation_3858459014719381509]),1)' />
+      </column>
+      <column caption='Upper Secondary Rate' datatype='real' name='[Calculation_3858459014748958729]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([Calculation_3858459014715629570])/IFNULL(sum([Calculation_3858459014719508486]),1)' />
+      </column>
+      <column caption='Completion Rate Lower Secondary Female' datatype='integer' name='[Completion_Rate_Lower_Secondary_Female]' role='measure' type='quantitative' />
+      <column caption='Completion Rate Lower Secondary Male' datatype='integer' name='[Completion_Rate_Lower_Secondary_Male]' role='measure' type='quantitative' />
+      <column caption='Completion Rate Primary Female' datatype='integer' name='[Completion_Rate_Primary_Female]' role='measure' type='quantitative' />
+      <column caption='Completion Rate Primary Male' datatype='integer' name='[Completion_Rate_Primary_Male]' role='measure' type='quantitative' />
+      <column caption='Completion Rate Upper Secondary Female' datatype='integer' name='[Completion_Rate_Upper_Secondary_Female]' role='measure' type='quantitative' />
+      <column caption='Completion Rate Upper Secondary Male' datatype='integer' name='[Completion_Rate_Upper_Secondary_Male]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='Grade 2 3 Proficiency Math' datatype='integer' name='[Grade_2_3_Proficiency_Math]' role='measure' type='quantitative' />
+      <column caption='Grade 2 3 Proficiency Reading' datatype='integer' name='[Grade_2_3_Proficiency_Reading]' role='measure' type='quantitative' />
+      <column caption='Gross Primary Education Enrollment' datatype='real' name='[Gross_Primary_Education_Enrollment]' role='measure' type='quantitative' />
+      <column caption='Gross Tertiary Education Enrollment' datatype='real' name='[Gross_Tertiary_Education_Enrollment]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[Latitude ]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Lower Secondary End Proficiency Math' datatype='integer' name='[Lower_Secondary_End_Proficiency_Math]' role='measure' type='quantitative' />
+      <column caption='Lower Secondary End Proficiency Reading' datatype='integer' name='[Lower_Secondary_End_Proficiency_Reading]' role='measure' type='quantitative' />
+      <column caption='OOSR Lower Secondary Age Female' datatype='integer' name='[OOSR_Lower_Secondary_Age_Female]' role='measure' type='quantitative' />
+      <column caption='OOSR Lower Secondary Age Male' datatype='integer' name='[OOSR_Lower_Secondary_Age_Male]' role='measure' type='quantitative' />
+      <column caption='OOSR Pre0Primary Age Female' datatype='integer' name='[OOSR_Pre0Primary_Age_Female]' role='measure' type='quantitative' />
+      <column caption='OOSR Pre0Primary Age Male' datatype='integer' name='[OOSR_Pre0Primary_Age_Male]' role='measure' type='quantitative' />
+      <column caption='OOSR Primary Age Female' datatype='integer' name='[OOSR_Primary_Age_Female]' role='measure' type='quantitative' />
+      <column caption='OOSR Primary Age Male' datatype='integer' name='[OOSR_Primary_Age_Male]' role='measure' type='quantitative' />
+      <column caption='OOSR Upper Secondary Age Female' datatype='integer' name='[OOSR_Upper_Secondary_Age_Female]' role='measure' type='quantitative' />
+      <column caption='OOSR Upper Secondary Age Male' datatype='integer' name='[OOSR_Upper_Secondary_Age_Male]' role='measure' type='quantitative' />
+      <column caption='Primary End Proficiency Math' datatype='integer' name='[Primary_End_Proficiency_Math]' role='measure' type='quantitative' />
+      <column caption='Primary End Proficiency Reading' datatype='integer' name='[Primary_End_Proficiency_Reading]' role='measure' type='quantitative' />
+      <column caption='Unemployment Rate' datatype='real' name='[Unemployment_Rate]' role='measure' type='quantitative' />
+      <column caption='Youth 15 24 Literacy Rate Female' datatype='integer' name='[Youth_15_24_Literacy_Rate_Female]' role='measure' type='quantitative' />
+      <column caption='Youth 15 24 Literacy Rate Male' datatype='integer' name='[Youth_15_24_Literacy_Rate_Male]' role='measure' type='quantitative' />
+      <column caption='Global_Education.csv' datatype='table' name='[__tableau_internal_object_id__].[Global_Education.csv_B907D98571654C9D836EDF2C97361931]' role='measure' type='quantitative' />
+      <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Gross_Primary_Education_Enrollment]' derivation='Sum' name='[sum:Gross_Primary_Education_Enrollment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gross_Tertiary_Education_Enrollment]' derivation='Sum' name='[sum:Gross_Tertiary_Education_Enrollment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Youth_15_24_Literacy_Rate_Female]' derivation='Sum' name='[sum:Youth_15_24_Literacy_Rate_Female:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Youth_15_24_Literacy_Rate_Male]' derivation='Sum' name='[sum:Youth_15_24_Literacy_Rate_Male:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3858459014719709191]' derivation='User' name='[usr:Calculation_3858459014719709191:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3858459014748786696]' derivation='User' name='[usr:Calculation_3858459014748786696:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_3858459014748958729]' derivation='User' name='[usr:Calculation_3858459014748958729:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Countries and areas)' hidden='true' name='[Action (Countries and areas)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Countries and areas]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/g7/sbvcj4094_126z7jdg_jqng40000gn/T/tableau-temp/#TableauTemp_1t88lz002odyak1avzhg20uhjgvy.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='01/08/2025 05:17:03 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Countries and areas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Countries and areas]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Countries and areas</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>202</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude </remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude ]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude </remote-alias>
+              <ordinal>1</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>202</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>202</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Pre0Primary_Age_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Pre0Primary_Age_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Pre0Primary_Age_Male</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Pre0Primary_Age_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Pre0Primary_Age_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Pre0Primary_Age_Female</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Primary_Age_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Primary_Age_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Primary_Age_Male</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Primary_Age_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Primary_Age_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Primary_Age_Female</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Lower_Secondary_Age_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Lower_Secondary_Age_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Lower_Secondary_Age_Male</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Lower_Secondary_Age_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Lower_Secondary_Age_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Lower_Secondary_Age_Female</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Upper_Secondary_Age_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Upper_Secondary_Age_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Upper_Secondary_Age_Male</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OOSR_Upper_Secondary_Age_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OOSR_Upper_Secondary_Age_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OOSR_Upper_Secondary_Age_Female</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>66</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Primary_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Primary_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Primary_Male</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Primary_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Primary_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Primary_Female</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Lower_Secondary_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Lower_Secondary_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Lower_Secondary_Male</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Lower_Secondary_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Lower_Secondary_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Lower_Secondary_Female</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Upper_Secondary_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Upper_Secondary_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Upper_Secondary_Male</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Completion_Rate_Upper_Secondary_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Completion_Rate_Upper_Secondary_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Completion_Rate_Upper_Secondary_Female</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>69</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Grade_2_3_Proficiency_Reading</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Grade_2_3_Proficiency_Reading]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Grade_2_3_Proficiency_Reading</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Grade_2_3_Proficiency_Math</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Grade_2_3_Proficiency_Math]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Grade_2_3_Proficiency_Math</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>43</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Primary_End_Proficiency_Reading</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Primary_End_Proficiency_Reading]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Primary_End_Proficiency_Reading</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>34</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Primary_End_Proficiency_Math</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Primary_End_Proficiency_Math]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Primary_End_Proficiency_Math</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lower_Secondary_End_Proficiency_Reading</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Lower_Secondary_End_Proficiency_Reading]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lower_Secondary_End_Proficiency_Reading</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>44</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lower_Secondary_End_Proficiency_Math</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Lower_Secondary_End_Proficiency_Math]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lower_Secondary_End_Proficiency_Math</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Youth_15_24_Literacy_Rate_Male</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Youth_15_24_Literacy_Rate_Male]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Youth_15_24_Literacy_Rate_Male</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Youth_15_24_Literacy_Rate_Female</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Youth_15_24_Literacy_Rate_Female]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Youth_15_24_Literacy_Rate_Female</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Birth_Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Birth_Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Birth_Rate</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>171</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gross_Primary_Education_Enrollment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Gross_Primary_Education_Enrollment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gross_Primary_Education_Enrollment</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gross_Tertiary_Education_Enrollment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Gross_Tertiary_Education_Enrollment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gross_Tertiary_Education_Enrollment</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>172</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unemployment_Rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unemployment_Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unemployment_Rate</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Global_Education.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>165</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Global_Education.csv_B907D98571654C9D836EDF2C97361931]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Youth_15_24_Literacy_Rate_Female:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Primary_Education_Enrollment:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3676978023454085122:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014748958729:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014719709191:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Tertiary_Education_Enrollment:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Youth_15_24_Literacy_Rate_Male:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014748786696:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Countries and areas:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Comoros&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gabon&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;East Timor&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Sudan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Cameroon&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mali&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Uganda&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;South Sudan&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Madagascar&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ivory Coast&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Guinea&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Niger&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Nigeria&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Republic of the Congo&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Rwanda&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Benin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Kenya&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+          <calculation class='tableau' formula='&quot;Males&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Global_Education.csv' id='Global_Education.csv_B907D98571654C9D836EDF2C97361931'>
+            <properties context=''>
+              <relation connection='textscan.0w49f3l1bsc0qx13iewf70cyujlj' name='Global_Education.csv' table='[Global_Education#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='Countries and areas' ordinal='0' />
+                  <column datatype='real' name='Latitude ' ordinal='1' />
+                  <column datatype='real' name='Longitude' ordinal='2' />
+                  <column datatype='integer' name='OOSR_Pre0Primary_Age_Male' ordinal='3' />
+                  <column datatype='integer' name='OOSR_Pre0Primary_Age_Female' ordinal='4' />
+                  <column datatype='integer' name='OOSR_Primary_Age_Male' ordinal='5' />
+                  <column datatype='integer' name='OOSR_Primary_Age_Female' ordinal='6' />
+                  <column datatype='integer' name='OOSR_Lower_Secondary_Age_Male' ordinal='7' />
+                  <column datatype='integer' name='OOSR_Lower_Secondary_Age_Female' ordinal='8' />
+                  <column datatype='integer' name='OOSR_Upper_Secondary_Age_Male' ordinal='9' />
+                  <column datatype='integer' name='OOSR_Upper_Secondary_Age_Female' ordinal='10' />
+                  <column datatype='integer' name='Completion_Rate_Primary_Male' ordinal='11' />
+                  <column datatype='integer' name='Completion_Rate_Primary_Female' ordinal='12' />
+                  <column datatype='integer' name='Completion_Rate_Lower_Secondary_Male' ordinal='13' />
+                  <column datatype='integer' name='Completion_Rate_Lower_Secondary_Female' ordinal='14' />
+                  <column datatype='integer' name='Completion_Rate_Upper_Secondary_Male' ordinal='15' />
+                  <column datatype='integer' name='Completion_Rate_Upper_Secondary_Female' ordinal='16' />
+                  <column datatype='integer' name='Grade_2_3_Proficiency_Reading' ordinal='17' />
+                  <column datatype='integer' name='Grade_2_3_Proficiency_Math' ordinal='18' />
+                  <column datatype='integer' name='Primary_End_Proficiency_Reading' ordinal='19' />
+                  <column datatype='integer' name='Primary_End_Proficiency_Math' ordinal='20' />
+                  <column datatype='integer' name='Lower_Secondary_End_Proficiency_Reading' ordinal='21' />
+                  <column datatype='integer' name='Lower_Secondary_End_Proficiency_Math' ordinal='22' />
+                  <column datatype='integer' name='Youth_15_24_Literacy_Rate_Male' ordinal='23' />
+                  <column datatype='integer' name='Youth_15_24_Literacy_Rate_Female' ordinal='24' />
+                  <column datatype='real' name='Birth_Rate' ordinal='25' />
+                  <column datatype='real' name='Gross_Primary_Education_Enrollment' ordinal='26' />
+                  <column datatype='real' name='Gross_Tertiary_Education_Enrollment' ordinal='27' />
+                  <column datatype='real' name='Unemployment_Rate' ordinal='28' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+      <datasources>
+        <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+        <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+        <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]'>
+        <groupfilter function='level-members' level='[none:Countries and areas:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_2CE3BB9DA34B429888FC5545600317E5]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Completion to OOSR' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Completion to OOSR' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action2_D253C9F43B4241F8B0770AB5218625DE]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Map' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Completion Rates'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'><![CDATA[Completion Rates Across Regions for <]]></run>
+            <run bold='true' fontalignment='1'>[Parameters].[Parameter 1]</run>
+            <run bold='true' fontalignment='1'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+              <calculation class='tableau' formula='&quot;Males&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column caption='Completion Rate Lower' datatype='integer' name='[Calculation_3858459014715117568]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Lower_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Lower_Secondary_Male]&#10;END' />
+            </column>
+            <column caption='Completion Rate Primary' datatype='integer' name='[Calculation_3858459014715310081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Primary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Primary_Male]&#10;END' />
+            </column>
+            <column caption='Completion Rate Upper' datatype='integer' name='[Calculation_3858459014715629570]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Upper_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Upper_Secondary_Male]&#10;END' />
+            </column>
+            <column caption='Completion Rate Lower Secondary Female' datatype='integer' name='[Completion_Rate_Lower_Secondary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Lower Secondary Male' datatype='integer' name='[Completion_Rate_Lower_Secondary_Male]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Primary Female' datatype='integer' name='[Completion_Rate_Primary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Primary Male' datatype='integer' name='[Completion_Rate_Primary_Male]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Upper Secondary Female' datatype='integer' name='[Completion_Rate_Upper_Secondary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Upper Secondary Male' datatype='integer' name='[Completion_Rate_Upper_Secondary_Male]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3858459014715117568]' derivation='Sum' name='[sum:Calculation_3858459014715117568:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3858459014715310081]' derivation='Sum' name='[sum:Calculation_3858459014715310081:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3858459014715629570]' derivation='Sum' name='[sum:Calculation_3858459014715629570:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715117568:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715310081:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715629570:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715117568:qk]' value='N' />
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715310081:qk]' value='N' />
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3858459014715629570:qk]' value='N' />
+            <format attr='text-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</rows>
+        <cols>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{672EBE3E-5B8D-4043-8CD0-6208005AE5C1}' />
+    </worksheet>
+    <worksheet name='Completion to OOSR'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Completion to OOSR Rate for &lt;</run>
+            <run bold='true' fontalignment='1'>[Parameters].[Parameter 1]</run>
+            <run bold='true' fontalignment='1'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+              <calculation class='tableau' formula='&quot;Males&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column caption='Completion Rate Lower' datatype='integer' name='[Calculation_3858459014715117568]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Lower_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Lower_Secondary_Male]&#10;END' />
+            </column>
+            <column caption='Completion Rate Primary' datatype='integer' name='[Calculation_3858459014715310081]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Primary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Primary_Male]&#10;END' />
+            </column>
+            <column caption='Completion Rate Upper' datatype='integer' name='[Calculation_3858459014715629570]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Completion_Rate_Upper_Secondary_Female]&#10;WHEN &apos;Males&apos; THEN [Completion_Rate_Upper_Secondary_Male]&#10;END' />
+            </column>
+            <column caption='OOSR lower' datatype='integer' name='[Calculation_3858459014719221764]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Lower_Secondary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Lower_Secondary_Age_Male]&#10;END' />
+            </column>
+            <column caption='OOSR Primary' datatype='integer' name='[Calculation_3858459014719381509]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Primary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Primary_Age_Male]&#10;END' />
+            </column>
+            <column caption='OOSR Upper' datatype='integer' name='[Calculation_3858459014719508486]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [OOSR_Upper_Secondary_Age_Female]&#10;WHEN &apos;Males&apos; THEN [OOSR_Upper_Secondary_Age_Male]&#10;END' />
+            </column>
+            <column caption='Lower Secondary Rate' datatype='real' name='[Calculation_3858459014719709191]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([Calculation_3858459014715117568])/IFNULL(sum([Calculation_3858459014719221764]),1)' />
+            </column>
+            <column caption='Primary Rate' datatype='real' name='[Calculation_3858459014748786696]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([Calculation_3858459014715310081])/IFNULL(sum([Calculation_3858459014719381509]),1)' />
+            </column>
+            <column caption='Upper Secondary Rate' datatype='real' name='[Calculation_3858459014748958729]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([Calculation_3858459014715629570])/IFNULL(sum([Calculation_3858459014719508486]),1)' />
+            </column>
+            <column caption='Completion Rate Lower Secondary Female' datatype='integer' name='[Completion_Rate_Lower_Secondary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Lower Secondary Male' datatype='integer' name='[Completion_Rate_Lower_Secondary_Male]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Primary Female' datatype='integer' name='[Completion_Rate_Primary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Primary Male' datatype='integer' name='[Completion_Rate_Primary_Male]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Upper Secondary Female' datatype='integer' name='[Completion_Rate_Upper_Secondary_Female]' role='measure' type='quantitative' />
+            <column caption='Completion Rate Upper Secondary Male' datatype='integer' name='[Completion_Rate_Upper_Secondary_Male]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='OOSR Lower Secondary Age Female' datatype='integer' name='[OOSR_Lower_Secondary_Age_Female]' role='measure' type='quantitative' />
+            <column caption='OOSR Lower Secondary Age Male' datatype='integer' name='[OOSR_Lower_Secondary_Age_Male]' role='measure' type='quantitative' />
+            <column caption='OOSR Primary Age Female' datatype='integer' name='[OOSR_Primary_Age_Female]' role='measure' type='quantitative' />
+            <column caption='OOSR Primary Age Male' datatype='integer' name='[OOSR_Primary_Age_Male]' role='measure' type='quantitative' />
+            <column caption='OOSR Upper Secondary Age Female' datatype='integer' name='[OOSR_Upper_Secondary_Age_Female]' role='measure' type='quantitative' />
+            <column caption='OOSR Upper Secondary Age Male' datatype='integer' name='[OOSR_Upper_Secondary_Age_Male]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3858459014719709191]' derivation='User' name='[usr:Calculation_3858459014719709191:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3858459014748786696]' derivation='User' name='[usr:Calculation_3858459014748786696:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3858459014748958729]' derivation='User' name='[usr:Calculation_3858459014748958729:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014719709191:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014748786696:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[usr:Calculation_3858459014748958729:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]'>
+            <groupfilter function='level-members' level='[Countries and areas]' user:ui-action-filter='[Action2_D253C9F43B4241F8B0770AB5218625DE]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' value='160' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' value='true' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]</rows>
+        <cols>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{49FDBAF9-19B3-45DA-8D5E-2CCA6BBADBE7}' />
+    </worksheet>
+    <worksheet name='Gross Ed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Gross Primary&amp;Tertiary Enrollment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Gross Primary Education Enrollment' datatype='real' name='[Gross_Primary_Education_Enrollment]' role='measure' type='quantitative' />
+            <column caption='Gross Tertiary Education Enrollment' datatype='real' name='[Gross_Tertiary_Education_Enrollment]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Gross_Primary_Education_Enrollment]' derivation='Sum' name='[sum:Gross_Primary_Education_Enrollment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gross_Tertiary_Education_Enrollment]' derivation='Sum' name='[sum:Gross_Tertiary_Education_Enrollment:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Primary_Education_Enrollment:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Tertiary_Education_Enrollment:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Primary_Education_Enrollment:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Tertiary_Education_Enrollment:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]'>
+            <groupfilter function='level-members' level='[Countries and areas]' user:ui-action-filter='[Action2_D253C9F43B4241F8B0770AB5218625DE]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' value='42' />
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Gross_Primary_Education_Enrollment:qk]' value='' />
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' value='false' />
+            <format attr='text-format' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Multiple Values]</rows>
+        <cols>([federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk] / [federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{F71BA7AF-7D15-4E07-9DB3-7B7874DCE695}' />
+    </worksheet>
+    <worksheet name='Literacy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'><![CDATA[Literacy Rates between Regions for <]]></run>
+            <run bold='true' fontalignment='1'>[Parameters].[Parameter 1]</run>
+            <run bold='true' fontalignment='1'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+              <calculation class='tableau' formula='&quot;Males&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column caption='Youth' datatype='integer' name='[Calculation_3770005503272435712]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='case [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Youth_15_24_Literacy_Rate_Female]&#10;WHEN &apos;Males&apos; Then [Youth_15_24_Literacy_Rate_Male]&#10;END' />
+            </column>
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Youth 15 24 Literacy Rate Female' datatype='integer' name='[Youth_15_24_Literacy_Rate_Female]' role='measure' type='quantitative' />
+            <column caption='Youth 15 24 Literacy Rate Male' datatype='integer' name='[Youth_15_24_Literacy_Rate_Male]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_3770005503272435712]' derivation='Sum' name='[sum:Calculation_3770005503272435712:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Youth_15_24_Literacy_Rate_Female]' derivation='Sum' name='[sum:Youth_15_24_Literacy_Rate_Female:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]'>
+            <groupfilter function='level-members' level='[Countries and areas]' user:ui-action-filter='[Action2_D253C9F43B4241F8B0770AB5218625DE]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' direction='DESC' using='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Youth_15_24_Literacy_Rate_Female:qk]' />
+          <filter class='quantitative' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' included-values='in-range'>
+            <min>3</min>
+            <max>92</max>
+          </filter>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='center' />
+            <format attr='text-orientation' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='-90' />
+            <format attr='wrap' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='off' />
+            <format attr='vertical-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='center' />
+            <format attr='color' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='#f6df55' />
+            <format attr='font-size' data-class='subtotal' scope='cols' value='9' />
+            <format attr='text-decoration' data-class='subtotal' scope='cols' value='none' />
+            <format attr='text-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' value='true' />
+            <format attr='font-weight' scope='cols' value='normal' />
+            <format attr='font-style' scope='cols' value='normal' />
+            <format attr='text-decoration' scope='cols' value='none' />
+            <format attr='font-size' scope='cols' value='12' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' />
+              <text column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{FF72063D-5207-405B-A445-7D577F238AB3}' />
+    </worksheet>
+    <worksheet name='Map'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column caption='Birth Rate' datatype='real' name='[Birth_Rate]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column aggregation='Avg' caption='Latitude' datatype='real' name='[Latitude ]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Latitude ]' derivation='Avg' name='[avg:Latitude :qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Longitude]' derivation='Avg' name='[avg:Longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Birth_Rate]' derivation='Sum' name='[sum:Birth_Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[avg:Longitude:qk]' field-type='quantitative' max='5472710.8356595784' min='-52246717.049322702' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[avg:Latitude :qk]' field-type='quantitative' max='15020779.313566022' min='-31837242.31939061' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' />
+              <color column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Birth_Rate:qk]' />
+              <geometry column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[avg:Latitude :qk]</rows>
+        <cols>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[avg:Longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{297C3479-C15B-4FAE-9CA5-2B1D21F27D23}' />
+    </worksheet>
+    <worksheet name='STD'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A0E92959-BE9C-401B-A6DB-E5236ADBCEE3}' />
+    </worksheet>
+    <worksheet name='Unemployment Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>Unemployment Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+            <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Unemployment Rate' datatype='real' name='[Unemployment_Rate]' role='measure' type='quantitative' />
+            <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Unemployment_Rate]' derivation='Sum' name='[sum:Unemployment_Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]'>
+            <groupfilter function='level-members' level='[Countries and areas]' user:ui-action-filter='[Action2_D253C9F43B4241F8B0770AB5218625DE]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]</column>
+            <column>[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[Action (Countries and areas)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='center' />
+            <format attr='vertical-align' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='auto' />
+            <format attr='font-size' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='20' />
+            <format attr='font-weight' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='bold' />
+            <format attr='font-style' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='normal' />
+            <format attr='color' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='#000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='true' />
+            <format attr='break-on-special' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='true' />
+            <format attr='show-null-value-warning' field='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' value='true' />
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Unemployment_Rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{21B3FB81-74BD-4446-8267-93BB4FDB6B3B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='2400' maxwidth='1600' minheight='2400' minwidth='1600' sizing-mode='range' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Global_Education' name='federated.1w70wvt0hl4i4l1bvk9re0qx57wv' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Switch' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Males&quot;'>
+          <calculation class='tableau' formula='&quot;Males&quot;' />
+          <members>
+            <member value='&quot;Females&quot;' />
+            <member value='&quot;Males&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1w70wvt0hl4i4l1bvk9re0qx57wv'>
+        <column caption='Youth' datatype='integer' name='[Calculation_3770005503272435712]' role='measure' type='quantitative'>
+          <calculation class='tableau' formula='case [Parameters].[Parameter 1]&#10;WHEN &apos;Females&apos; THEN [Youth_15_24_Literacy_Rate_Female]&#10;WHEN &apos;Males&apos; Then [Youth_15_24_Literacy_Rate_Male]&#10;END' />
+        </column>
+        <column datatype='string' name='[Countries and areas]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+        <column-instance column='[Countries and areas]' derivation='None' name='[none:Countries and areas:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Calculation_3770005503272435712]' derivation='Sum' name='[sum:Calculation_3770005503272435712:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='49750' id='21' param='horz' type-v2='layout-flow' w='99000' x='500' y='333'>
+            <zone h='49750' id='19' type-v2='layout-basic' w='99000' x='500' y='333'>
+              <zone h='9552' id='3' param='vert' type-v2='layout-flow' w='99000' x='500' y='333'>
+                <zone h='9552' id='5' param='horz' type-v2='layout-flow' w='99000' x='500' y='333'>
+                  <zone fixed-size='732' h='9552' id='9' is-fixed='true' type-v2='text' w='46250' x='500' y='333'>
+                    <formatted-text>
+                      <run bold='true' fontalignment='1' fontsize='15'>Education Across Regions</run>
+                    </formatted-text>
+                    <zone-style>
+                      <format attr='border-color' value='#ffffff' />
+                      <format attr='border-style' value='solid' />
+                      <format attr='border-width' value='1' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding' value='10' />
+                      <format attr='background-color' value='#efebe8' />
+                    </zone-style>
+                  </zone>
+                  <zone h='9552' id='7' name='Unemployment Rate' w='52750' x='46750' y='333'>
+                    <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                      <format attr='padding' value='4' />
+                      <format attr='background-color' value='#efebe8' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='23644' id='11' name='Completion Rates' w='49500' x='500' y='9885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='padding' value='4' />
+                  <format attr='background-color' value='#efebe8' />
+                </zone-style>
+              </zone>
+              <zone h='16554' id='13' name='Gross Ed' w='77625' x='21875' y='33529'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='padding' value='4' />
+                  <format attr='background-color' value='#efebe8' />
+                </zone-style>
+              </zone>
+              <zone h='16554' id='18' name='Literacy' w='21375' x='500' y='33529'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='padding' value='4' />
+                  <format attr='background-color' value='#efebe8' />
+                </zone-style>
+              </zone>
+              <zone h='23644' id='23' name='Completion to OOSR' w='49500' x='50000' y='9885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                  <format attr='padding' value='4' />
+                  <format attr='background-color' value='#efebe8' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='49584' id='24' name='Map' w='88000' x='500' y='50083'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='10' />
+              <format attr='background-color' value='#f5f1f0' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='160' h='49584' id='20' is-fixed='true' param='vert' type-v2='layout-flow' w='11000' x='88500' y='50083'>
+            <zone h='2875' id='22' name='Literacy' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89000' y='50417'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='2166' id='17' mode='checkdropdown' name='Completion Rates' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' type-v2='filter' w='10000' x='89000' y='53292'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='2750' id='14' name='Gross Ed' pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' type-v2='color' w='10000' x='89000' y='55458'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='3125' id='12' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89000' y='58208'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='2708' id='25' name='Map' pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Birth_Rate:qk]' type-v2='color' w='10000' x='89000' y='61333'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='padding' value='4' />
+              <format attr='background-color' value='#efebe8' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='27' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99334' id='26' param='vert' type-v2='layout-flow' w='99000' x='500' y='333'>
+                <zone fixed-size='732' h='9552' id='9' type-v2='text' w='46250' x='500' y='333'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontsize='15'>Education Across Regions</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#ffffff' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='213' h='9552' id='7' is-fixed='true' name='Unemployment Rate' w='52750' x='46750' y='333'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone h='2166' id='17' mode='checkdropdown' name='Completion Rates' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' type-v2='filter' w='10000' x='89000' y='53292'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='23644' id='11' is-fixed='true' name='Completion Rates' w='37437' x='500' y='9885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='23644' id='13' is-fixed='true' name='Gross Ed' w='61563' x='37937' y='9885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone h='2750' id='14' name='Gross Ed' pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' type-v2='color' w='10000' x='89000' y='55458'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='2875' id='22' name='Literacy' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10000' x='89000' y='50417'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='16554' id='18' is-fixed='true' name='Literacy' w='49500' x='500' y='33529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='16554' id='23' is-fixed='true' name='Completion to OOSR' w='49500' x='50000' y='33529'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#efebe8' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49584' id='24' is-fixed='true' name='Map' w='88000' x='500' y='50083'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f5f1f0' />
+                  </zone-style>
+                </zone>
+                <zone h='2708' id='25' name='Map' pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Birth_Rate:qk]' type-v2='color' w='10000' x='89000' y='61333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3125' id='12' mode='slider' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10000' x='89000' y='58208'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D0840298-B96D-4B92-A5FA-EB7C562BD6A3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Map'>
+      <cards>
+        <edge name='left'>
+          <strip size='296'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Birth_Rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{331A32B3-59F1-4D13-888E-AB8ADDBFEDAA}' />
+    </window>
+    <window class='worksheet' name='Literacy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='checkdropdown' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[none:Countries and areas:nk]' type='filter' />
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[sum:Calculation_3770005503272435712:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{830381EC-FCBA-4154-A8B6-B06C13594239}' />
+    </window>
+    <window class='worksheet' name='Gross Ed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C7217087-535C-4072-95F6-1BA17C8DA3D0}' />
+    </window>
+    <window class='worksheet' name='Completion Rates'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F5DF76DA-EF50-49F4-95AD-7ADEE0B10D44}' />
+    </window>
+    <window class='worksheet' name='Unemployment Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{D83029E8-9479-4C95-8CBB-4C3DB35400ED}' />
+    </window>
+    <window class='worksheet' name='Completion to OOSR'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1w70wvt0hl4i4l1bvk9re0qx57wv].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{66AEE19E-0B6C-4591-9272-E4BA54063D2F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='STD'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{777C41E0-469C-44F7-AF3E-81A3F335F828}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Completion Rates'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Completion to OOSR'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Gross Ed' />
+        <viewpoint name='Literacy'>
+          <zoom type='fit-width' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='Map'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='Unemployment Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='24' />
+      <simple-id uuid='{9F20D8D8-4698-4167-88E1-E126E41960BF}' />
+    </window>
+  </windows>
+</workbook>
